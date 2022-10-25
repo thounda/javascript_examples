@@ -1,9 +1,9 @@
 {
-  "name": "javascript-essential-training-exercise-files",
+  "name": "javascript-training-exercise-files",
   "version": "1.0.0",
   "description": "Repository for exercise files used in the LinkedIn Learning course `JavaScript Essential Training` instructed by Morten Rand-Hendriksen and published 2020.",
   "main": "index.html",
-  "author": "Morten Rand-Hendriksen",
+  "author": "Thounda Craig",
   "license": "SEE LICENSE IN LICENSE",
   "devDependencies": {
     "eslint": "^7.11.0",
