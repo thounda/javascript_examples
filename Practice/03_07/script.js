@@ -1,5 +1,5 @@
 /**
- * Practice: Building objects
+ * Practice: Building objects (Try on your own)
  *
  * - Create JavaScript objects based on objects in your current environment.
  * - Give each object an identifiable name.
