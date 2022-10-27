@@ -1,5 +1,7 @@
 /**
  * Create a Backpack object, populate some HTML to display its properties.
+ * Rule of thumb: suggest writing all objects and variable first (higher up in code) before trying to
+ * call them (later in the script).  This is based on how JS process logic whcih is 'Top/Down' in structure by default.
  */
 
 // Single line comment
