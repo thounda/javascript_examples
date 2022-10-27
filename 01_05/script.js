@@ -1,5 +1,9 @@
 /**
  * Create a Backpack object, populate some HTML to display its properties.
+ * In this excercise - look at the backpack object and within that object, change the Boleon status
+ * 'backpack.toggleLid' to TRUE - i.e. type the command in console.log to see the, instant, chage from FALSE for 'LidStatus'
+ *
+ * backpack.toggleLid(true);
  */
 
 // Single line comment
