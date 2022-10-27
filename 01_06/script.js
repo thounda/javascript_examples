@@ -4,10 +4,14 @@
  * call them (later in the script).  This is based on how JS process logic whcih is 'Top/Down' in structure by default.
  */
 
+/** / Semi-colons and SINGLE or DOUBLE Quotes are all 'Developer' preference - not a requirement for use by JS.  Note: just be consitent with which ever preference being used and JS will decifer code (syntax) structure
+ */
 // Single line comment
 
 /* Multi-line comment
 See! this line is also commented out! */
+
+// By placing your cursor on a line or highlighting multiple lines then hitting CTL / (forward slash) will comment out or uncomment those - select - lines in VSCode.
 
 /**
  *  In VSCode you can enter '/**' and VSCode will auto-populate commments and capture the var as param for comment as shown, below:
