@@ -4,8 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Module demo</title>
+    <!-- Ensure to set type = module when breaking out code to the HTML file aware -->
+    <!-- when JS module type set, the JS file keyword set to 'defer' automatically -->
     <script type="module" src="backpack.js"></script>
     <script type="module" src="script.js"></script>
+    <!-- the two JS files are only scoped to index.html and not 0 accessible - i.e. NOT0 via console log -->
   </head>
   <body></body>
 </html>

@@ -25,4 +25,4 @@ const backpack = {
   },
 };
 
-export default backpack;
+export default backpack; // this entity named, backpack, can be used by other scripts if imported

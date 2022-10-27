@@ -1,7 +1,7 @@
 /**
  * Create a Backpack object, populate some HTML to display its properties.
  */
-import backpack from "./backpack.js";
+import backpack from "./backpack.js"; // This line imports the backpack.js file into script.js
 
 const markup = (backpack) => {
   return `
