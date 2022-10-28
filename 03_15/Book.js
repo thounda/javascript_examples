@@ -1,3 +1,4 @@
+/** Created a class declaration and then created several objects from the class.  The Book object class is imported into the file as a module - scoping accessibility to the class just to that, imported, file */
 class Book {
   constructor(
     title,
