@@ -7,7 +7,7 @@ class Backpack {
     strapLengthL,
     strapLengthR,
     lidOpen,
-    dateAcquired
+    dateAcquired // a new parameter added to demonstrate use of global (built-in) objects.
   ) {
     this.name = name;
     this.volume = volume;

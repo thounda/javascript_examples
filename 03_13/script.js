@@ -18,3 +18,6 @@ const everydayPack = new Backpack(
 
 console.log("The everydayPack object:", everydayPack);
 console.log("Date acquired:", everydayPack.dateAcquired);
+
+// Run method to get days acquired based on set date in everydayPack object vs current date that is set
+console.log("Days since acquired:", everydayPack.backpackAge());
