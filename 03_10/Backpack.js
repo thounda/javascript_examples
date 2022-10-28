@@ -38,3 +38,5 @@ class Backpack {
 }
 
 export default Backpack;
+
+// A classic example of how to create & structure a class (object template) to then be available to other files via import

@@ -16,3 +16,6 @@ const everydayPack = new Backpack(
 
 console.log("The everydayPack object:", everydayPack);
 console.log("The pocketNum value:", everydayPack.pocketNum);
+
+// Rule of thumb: classes can be defined - in most cases - within modules
+// Then, import the class into files to which will ensure the class define at the beginnig of the script
