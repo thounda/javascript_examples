@@ -39,3 +39,14 @@ const everydayPack = new Backpack(
   26,
   false
 );
+
+/** An 'object constructor' function is a shorter version to build an objecti template (class).
+One difference with how a class vs the object constructor function is that the method lives 
+inside the, main, object constuctor function just like the properties.
+
+A class allow more capabilities than an object constructor function and the preferred choice over 
+an OC function by most developer. However, OC functions at one point was the only way to define objects.
+
+Rule of thumb: always use a class unless working with old code where OC functions already defined or you 
+simply required to use an OC function due to old code base or infrastructure not supporting classes.
+ */
