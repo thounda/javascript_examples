@@ -16,22 +16,8 @@ const everydayPack = new Backpack(
   "December 5, 2018 15:00:00 PST"
 );
 
-const content = `
-  <main>
-    <article>
-      <h1>${everydayPack.name}</h1>
-      <ul>
-        <li>Volume: ${everydayPack.volume}</li>
-        <li>Color: ${everydayPack.color}</li>
-        <li>Age: ${everydayPack.backpackAge()}</li>
-        <li>Number of pockets: ${everydayPack.pocketNum}</li>
-        <li>Left strap length: ${everydayPack.strapLength.left}</li>
-        <li>Right strap length: ${everydayPack.strapLength.right}</li>
-        <li>Lid status: ${everydayPack.lidOpen}</li>
-      </ul>
-    </article>
-  </main>
-`;
+// the const changed to use string concantenation - not recommened anymore but fyi... on use
+const content = "<h1>" + everydayPack.name + "</h1>";
 
 document.body.innerHTML = content;
 
