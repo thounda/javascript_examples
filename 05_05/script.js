@@ -51,3 +51,16 @@ const content = `
 `;
 
 main.innerHTML = content;
+
+/** The className property of the Element interface gets and sets the value of the class attribute of the specified element.  
+ 
+ * The Element.classList is a read-only property that returns a live DOMTokenList collection of the class attributes of the element. This can then be used to manipulate the class list.
+
+Using classList is a convenient alternative to accessing an element's list of classes as a space-delimited string via element.className.
+
+document.querySelector("h1").className
+'backpack__name'
+document.querySelector("main li:first-child").classList;
+DOMTokenList(2) ['packprop', 'backpack__volume', value: 'packprop backpack__volume']
+
+*/
