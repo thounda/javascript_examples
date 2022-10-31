@@ -51,3 +51,33 @@ const content = `
 `;
 
 main.innerHTML = content;
+
+/** The Element.attributes property returns a live collection of all attribute nodes registered to the specified node. It is a NamedNodeMap, not an Array, so it has no Array methods and the Attr nodes' indexes may differ among browsers. To be more specific, attributes is a key/value pair of strings that represents any information regarding that attribute.
+ * 
+ * TO CHECK FOR A SPECIFIC ATTRIBUTE 
+ Console.log command: document.querySelector("img").hasAttribute("src")
+Results: true
+
+* TO GET THE SPECIFIED ATTRIBUTE
+Console.Log command: document.querySelector("img").getAttribute("src")
+'../assets/images/everyday.svg'
+
+or 
+
+document.querySelector("img").getAttribute("alt")
+''
+
+* TO SET AN ATTRIBUTE ON A TAG
+document.querySelector("img").setAttribute("alt", "Backpack Drawing")
+document.querySelector("img").setAttribute("title", "This should not be here")
+
+* TO SET AN ATTRIBUTE ON A TAG
+document.querySelector("img").removeAttribute("title")
+
+-----
+
+Console.log Commands & Results to list ALL attributes:
+ * document.querySelector("img").attributes
+NamedNodeMap {0: src, 1: alt, src: src, alt: alt, length: 2} 
+
+*/
