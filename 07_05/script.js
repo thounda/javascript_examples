@@ -6,6 +6,8 @@
  * - Sort the items by alphabetical order
  * - Use the find() method to find a specific item in the array
  * - Remove the item you found using the find method from the array.
+ *
+ * Note: ONLY uncomment one solution at a time so that the integrity of the constant values show correct in console log.  Thus, comment out each solution as you move to the next to view results in the browers.
  */
 
 const deskArray = [
