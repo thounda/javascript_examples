@@ -3,6 +3,7 @@
  * @link https://developer.mozilla.org/en-US/docs/Glossary/Function
  */
 
+// Created a standard object with properties
 const greenPack = {
   name: "Frog Pack",
   color: "green",
@@ -10,6 +11,7 @@ const greenPack = {
   pocketNum: 3,
 };
 
+// Anonymous function expression set via a constant to display / inject content into the HTML DOM
 const addPack = function (currentPack) {
   const newArticle = document.createElement("article");
   newArticle.innerHTML = `
@@ -23,5 +25,10 @@ const addPack = function (currentPack) {
   return newArticle;
 };
 
+// If to see the dynamic content via console log
+const theArticle = addPack(greenPack);
+console.log(theArticle);
+
+// constant containing the queried element from the html document to append the dynamic content
 const main = document.querySelector("main");
 main.append(addPack(greenPack));
