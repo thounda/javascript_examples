@@ -32,13 +32,13 @@ const printHTML = (finalTip) => {
     <tr>
       <td>Total:</td>
       <td>${finalTip.total}</td>
-    </tr>
+    </tr><br />
   `;
   document.querySelector("main").append(tipTable);
 };
 
 // Create a finalTip object with all the data. Send it to the printHTML callback.
-const tipCalculator = (sum, percentage, locale, currency) => {
+const tipCalculator = (sum, percentage, locale, currency, callback) => {
   let tip = sum * (percentage / 100);
   let total = sum + tip;
 
@@ -48,6 +48,11 @@ const tipCalculator = (sum, percentage, locale, currency) => {
     tip: formatter(locale, currency, tip),
     total: formatter(locale, currency, total),
   };
+
+  // execute the 'callback' function - passing the object 'finalTip' into that function
+  callback(finalTip);
 };
 
-tipCalculator(29.95, 18, "de-DE", "EUR");
+/*Pass the entire, printHTML, function up into tipcalculator function as a value and that the function gets captured as a parameter in callback.  Note the parenthesis not included so the code parsed only ot callback - read comments in the commit for detailed explanation  */
+tipCalculator(29.95, 18, "de-DE", "EUR", printHTML);
+tipCalculator(29.95, 29, "nb-NO", "NOK", printHTML);
