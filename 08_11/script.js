@@ -18,6 +18,7 @@ const everydayPack = new Backpack(
   "../assets/images/everyday.svg"
 );
 
+// made change to 'lidOpen' - added conditional logic (ternary operator) to set 'string' value based on Boolean
 const content = `
   <figure class="backpack__image">
     <img src=${everydayPack.image} alt="" loading="lazy" />
@@ -41,7 +42,7 @@ const content = `
       everydayPack.strapLength.right
     } inches</span></li>
     <li class="feature backpack__lid">Lid status:<span> ${
-      everydayPack.lidOpen
+      everydayPack.lidOpen ? "open" : "close"
     }</span></li>
   </ul>
 `;
