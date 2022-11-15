@@ -55,8 +55,23 @@ newArticle.innerHTML = content;
 
 main.append(newArticle);
 
+// Greater than or Equal to logical operator
 if (everydayPack.backpackAge() >= 30) {
-  console.log("Backpack is used")
+  console.log("Backpack is used");
 } else {
-  console.log("Backpack is new")
+  console.log("Backpack is new");
+}
+
+// AND logical operator
+if (everydayPack.volume > 35 && everydayPack.pocketNum >= 5) {
+  console.log("Backpack is Big");
+} else {
+  console.log("Backpack is small");
+}
+
+// OR logical operator
+if (everydayPack.volume > 35 || everydayPack.pocketNum >= 5) {
+  console.log("Backpack is Big");
+} else {
+  console.log("Backpack is small");
 }
