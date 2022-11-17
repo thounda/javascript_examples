@@ -1,6 +1,9 @@
 /**
  * Switch statement
  * @link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch
+ * 
+ * Definittion of use: 
+ The switch statement evaluates an expression, matching the expression's value against a series of case clauses, and executes statements after the first case clause with a matching value, until a break statement is encountered. The default clause of a switch statement will be jumped to if no case matches the expression's value.
  */
 
 import Backpack from "./Backpack.js";
@@ -56,7 +59,10 @@ main.append(newArticle);
 
 const usedStatus = () => {
   let age = everydayPack.backpackAge();
+  //age = 29; // change number to test difference cases 29, 30, 301, 364, 365, 1094, 1095
   let description;
+  /*
+  //  This is how IF ELSE statements would be used in place of SWITCH statements - not recommended
   if (age >= 30) {
     if (age >= 365) {
       if (age >= 1095) {
@@ -70,11 +76,31 @@ const usedStatus = () => {
   } else {
     description = "new";
   }
+*/
 
+  // This is the Switch configuration which recommended to set conditions
+  switch (true) {
+    case age >= 1 && age < 30:
+      description = "new";
+      break;
+    case age >= 30 && age < 365:
+      description = "lightly used";
+      break;
+    case age >= 365 && age < 1095:
+      description = "used";
+      break;
+    case age >= 1095:
+      description = "old";
+      break;
+    default:
+      console.log(`There is no description for ${age}.`);
+  }
+
+  // Console log out results to browser
   console.log(`
   Age: ${age} days
   Status: ${description}
   `);
 };
 
-usedStatus()
+usedStatus();
