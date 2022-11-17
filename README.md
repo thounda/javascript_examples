@@ -1,6 +1,7 @@
 # JavaScript Essential Training
 
-This is the repository for the LinkedIn Learning course JavaScript Essential Training. The full course is available from [LinkedIn Learning][lil-course-url].
+This is the modified repository for the LinkedIn Learning course JavaScript Essential Training. The full course is available from [LinkedIn Learning][lil-course-url].
+For this set of examples, I've stepped through the initial scripts and added custom code to highlight the various features and use of JS for study. These code examples can be used in production environments as links to MDN included in the comment sections to help explain objectives along with my own notes.
 
 ![JavaScript Essential Training][lil-thumbnail-url]
 JavaScript is a scripting language of the web. As the web evolves from a static to a dynamic environment, technology focus is shifting from static markup and styling—frequently handled by content management systems or automated scripts—to dynamic interfaces and advanced interaction. Once seen as optional, JavaScript is now becoming an integral part of the web, infusing every layer with its script.
@@ -30,7 +31,3 @@ Some movies will have a beginning and an end state. In the exercise files, the e
 
 _Fullstack Web Developer_
 
-Check out other courses on [LinkedIn Learning](https://www.linkedin.com/learning/instructors/morten-rand-hendriksen?u=104).
-
-[lil-course-url]: https://www.linkedin.com/learning/javascript-essential-training
-[lil-thumbnail-url]: https://cdn.lynda.com/course/2832077/2832077-1610728160487-16x9.jpg
