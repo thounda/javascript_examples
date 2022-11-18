@@ -74,7 +74,7 @@ let stuffList = document.createElement("ul");
 // });
 
 /**
- * for...in loop and objects
+ * for...in loop and objects - recommended solution to loop thru objects
  * @link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of
  */
 for (const singleObject in nestedObjects) {
