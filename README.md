@@ -11,7 +11,7 @@ Through practical examples and mini-projects, this course helps you build your u
 
 This repository does not have any branches. Download the entire repository and you get the exercise files in their final state.
 
-Each folder corresponds with a movie with an exercise file. The naming convention is `CHAPTER#_MOVIE#`. As an example, the folder named `02_03` corresponds to the second chapter and the third video in that chapter.
+Each folder corresponds with a movie with an exercise file. The naming convention is `CHAPTER#_FOLDER#`. As an example, the folder named `02_03` corresponds to the second chapter and the third lecture in that chapter.
 
 Some examples will have a beginning and an end state - I've worked thru all the 'final' logic using the 'starter' files so you can compare to the actual 'end' files (optional). In the exercise files, the end-state for a file / folder is marked with an `e` for "end" as in `02_03e`. This folder contains the code as it is at the end of the, default, configurations.
 
@@ -28,4 +28,3 @@ Some examples will have a beginning and an end state - I've worked thru all the 
 
 **Thounda Craig Jr**
 _Fullstack Web Developer_
-
