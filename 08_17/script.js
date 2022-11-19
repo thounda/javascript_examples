@@ -5,20 +5,22 @@
  * - Set the inner HTML of the article to the existing HTML output provided in const content.
  * - Append each backpack object to the <main> element.
  */
+
+// Hook in module so script.js has access to logic defined in data.js
 import backpackObjectArray from "./components/data.js";
 
-// Map throught the array and make a new array
+// Map through the array and defining a new object during each interation
 const content = backpackObjectArray.map((backpack) => {
   // "backpack" now holds a single backpack object
 
-  // Create new article
+  // Create new article & set class to element
   let backpackArticle = document.createElement("article");
   backpackArticle.classList.add("backpack");
 
-  // Set article ID to the backpack.id property
+  // Set article ID to the backpack.id property from the array - this can be viewed by debugging on the array's length and recommended due to multiple items will be looped thru for population from the array. In this case - ALWAYS include ID reference for each item to use in query
   backpackArticle.setAttribute("id", backpack.id);
 
-  // Set the innerHTML of backpackArticle using the backpack object.
+  // Set the innerHTML of backpackArticle using the backpack object to populate the template with the dynamic content / variables pulled from queried objeect during loop
   backpackArticle.innerHTML = `
     <figure class="backpack__image">
       <img src=${backpack.image} alt="" loading="lazy" />
@@ -51,7 +53,7 @@ const content = backpackObjectArray.map((backpack) => {
   return backpackArticle;
 });
 
-// Get the main
+// Get the main element to APPEND the dynamic content to the DOM via the 'main' constant
 const main = document.querySelector(".maincontent");
 
 // Loop through the content array to append each backpack article.
