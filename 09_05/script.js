@@ -9,26 +9,27 @@ import backpackObjectArray from "./components/data.js";
  * Add event listener to the lid-toggle button.
  */
 const lidToggle = function () {
-   
   // Find the current backpack object in backpackObjectArray
-  let backpackObject = backpackObjectArray.find( ({ id }) => id === this.parentElement.id );
-  
+  let backpackObject = backpackObjectArray.find(
+    ({ id }) => id === this.parentElement.id
+  );
+
   // Toggle lidOpen status
-  backpackObject.lidOpen == true 
-    ? backpackObject.lidOpen = false 
-    : backpackObject.lidOpen = true;
+  backpackObject.lidOpen == true
+    ? (backpackObject.lidOpen = false)
+    : (backpackObject.lidOpen = true);
 
   // Toggle button text
-  this.innerText == "Open lid" 
-    ? this.innerText = "Close lid" 
-    : this.innerText = "Open lid";
+  this.innerText == "Open lid"
+    ? (this.innerText = "Close lid")
+    : (this.innerText = "Open lid");
 
   // Set visible property status text
   let status = this.parentElement.querySelector(".backpack__lid span");
   status.innerText == "closed"
     ? (status.innerText = "open")
     : (status.innerText = "closed");
-}
+};
 
 /**
  * - Loop through backpackObjectArray
@@ -69,13 +70,44 @@ const backpackList = backpackObjectArray.map((backpack) => {
     <button class="lid-toggle">Open lid</button>
   `;
 
-  const button = backpackArticle.querySelector(".lid-toggle")
-  const status = backpackArticle.querySelector(".backpack__lid span")
+  const button = backpackArticle.querySelector(".lid-toggle");
+  const status = backpackArticle.querySelector(".backpack__lid span");
 
-  button.addEventListener("click", (event) => {
-    console.log(event)
-    status.innerText === "open" ? status.innerText = "closed" : status.innerText = "open"
-  })
+  // Edit the EventListener to toggle button text on 'click' event based on 'button' element
+  // button.addEventListener("click", (event) => {
+  //   console.log(event);
+  //   button.innerText === "Open lid"
+  //     ? (button.innerText = "Close lid")
+  //     : (button.innerText = "Open lid");
+  //   status.innerText === "open"
+  //     ? (status.innerText = "closed")
+  //     : (status.innerText = "open");
+  // });
+
+  // EventListener to toggle button text on 'click' event based on 'this' keyword with arrow func - won't work b/c 'this' doesn't know the object
+  // button.addEventListener("click", (event) => {
+  //   console.log(event);
+  //   this.innerText === "Open lid"
+  //     ? (this.innerText = "Close lid")
+  //     : (this.innerText = "Open lid");
+  //   status.innerText === "open"
+  //     ? (status.innerText = "closed")
+  //     : (status.innerText = "open");
+  // });
+
+  // EventListener to toggle button text on 'click' event based on 'this' keyword with function Declaration - will work with 'this' keyword b/c we're working within a proper object - THIS WORKS!
+  // button.addEventListener("click", function (event) {
+  //   console.log(event);
+  //   this.innerText === "Open lid"
+  //     ? (this.innerText = "Close lid")
+  //     : (this.innerText = "Open lid");
+  //   status.innerText === "open"
+  //     ? (status.innerText = "closed")
+  //     : (status.innerText = "open");
+  // });
+
+  // Based on refactoring the logic - scroll to top of script to view the anonymous function - this 'keyword' still work via the 'lidToggle' callback in the Eventlistener for the button element
+  button.addEventListener("click", lidToggle);
 
   return backpackArticle;
 });
