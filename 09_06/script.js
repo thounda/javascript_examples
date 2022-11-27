@@ -9,35 +9,38 @@ import backpackObjectArray from "./components/data.js";
  * Add event listener to the lid-toggle button.
  */
 const lidToggle = function (event, button, newArg) {
-  console.log(event)
-  console.log(newArg)
-   
-  // Find the current backpack object in backpackObjectArray
-  let backpackObject = backpackObjectArray.find( ({ id }) => id === button.parentElement.id );
-  
+  console.log(event);
+  console.log(newArg);
+
+  // Find the current backpack (button) object in backpackObjectArray
+  let backpackObject = backpackObjectArray.find(
+    ({ id }) => id === button.parentElement.id
+  );
+
   // Toggle lidOpen status
-  backpackObject.lidOpen == true 
-    ? backpackObject.lidOpen = false 
-    : backpackObject.lidOpen = true;
+  backpackObject.lidOpen == true
+    ? (backpackObject.lidOpen = false)
+    : (backpackObject.lidOpen = true);
 
   // Toggle button text
-  button.innerText == "Open lid" 
-    ? button.innerText = "Close lid" 
-    : button.innerText = "Open lid";
+  button.innerText == "Open lid"
+    ? (button.innerText = "Close lid")
+    : (button.innerText = "Open lid");
 
   // Set visible property status text
   let status = button.parentElement.querySelector(".backpack__lid span");
   status.innerText == "closed"
     ? (status.innerText = "open")
     : (status.innerText = "closed");
-}
+};
 
+// Create new array of the original array 'backpackObjectArray' to querry the array for element 'backpack'
 const backpackList = backpackObjectArray.map((backpack) => {
-
   let backpackArticle = document.createElement("article");
   backpackArticle.classList.add("backpack");
   backpackArticle.setAttribute("id", backpack.id);
 
+  // Define dynamic content using innerHTML method & template literals
   backpackArticle.innerHTML = `
     <figure class="backpack__image">
       <img src=${backpack.image} alt="" loading="lazy" />
@@ -66,15 +69,17 @@ const backpackList = backpackObjectArray.map((backpack) => {
     </ul>
     <button class="lid-toggle">Open lid</button>
   `;
-  
+
+  // Define vars to pass into callback / anonymous function
   let button = backpackArticle.querySelector(".lid-toggle");
-  let newArg = "The argument I want to pass to the callback function!"
+  let newArg = "The argument I want to pass to the callback function!";
 
-  // Add event listener
+  // Add event listener with an ananymous function which wraps 'lidToggle' inside to pass arguments
   button.addEventListener("click", (event) => {
-    lidToggle(event, button, newArg)
-  })
+    lidToggle(event, button, newArg);
+  });
 
+  // Pass back results from function back to global scope where function was called in script - output
   return backpackArticle;
 });
 
@@ -84,5 +89,3 @@ const main = document.querySelector(".maincontent");
 backpackList.forEach((backpack) => {
   main.append(backpack);
 });
-
-
