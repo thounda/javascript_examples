@@ -136,3 +136,6 @@ const main = document.querySelector(".maincontent");
 backpackList.forEach((backpack) => {
   main.append(backpack);
 });
+
+/* Remember this challenge is to understand Vanilla JavaScript * this build would be a bit less complicated - using React (SMILE).  However - IMPORTANT Point - you still need to understand JS to work with React Hooks, etc... Thus, ensure you have a sound foundation with JS & ES6 (Typescript, etc...) before trying to tackle React.  Why? React is a heavy doze of - you guessed it: Vanilla JS (Smile)
+ */
