@@ -129,3 +129,11 @@ const main = document.querySelector(".maincontent");
 backpackList.forEach((backpack) => {
   main.append(backpack);
 });
+
+/*
+Use the console.log or CL tool to troubleshoot JavaScript (JS) errors by echoing out the results of vars and even writing JS code, directly, within the CL as it is a LIVE environment.
+
+Yes, you can write any JS code you want in CL and it's effectively like writing JavaScript in a file except you're doing it live in the browser. That way, you can run code in the browser and test it right away, directly from the console in real time.
+
+There is also the 'Debugger' tool which will allow you to step through your JS code using break points.
+*/
