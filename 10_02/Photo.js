@@ -6,9 +6,14 @@
  * Copyright (c) 2015-2018 Sandra Gonzales
  */
 
+/*  if you understand the fundamentals of JavaScript itself, you'll be able to understand what is going on inside a JavaScript Framework like React even if you don't know the framework or the framework specific language.
+ */
+
+// Two statements, below, are hooking those two scripts into local file for use
 import React from "react";
 import PropTypes from "prop-types";
 
+// Constant is defined with objects
 const imgWithClick = { cursor: "pointer" };
 
 const Photo = ({
@@ -76,3 +81,7 @@ Photo.propTypes = {
 };
 
 export default Photo;
+
+/*
+Understanding the fundamentals of JavaScript gives you the tools and language you need to be able to understand what is going on in JavaScript frameworks because JavaScript frameworks are built on top of Vanilla JavaScript. Now you have the tools and you are ready to get started on your learning journey to extend your knowledge into JavaScript Frameworks as well...
+*/
